@@ -7,14 +7,14 @@ package View;
 
 /**
  *
- * @author Miguel
+ * @author alunos
  */
-public class Splash_GUI extends javax.swing.JFrame {
+public class Menu_GUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form Splash_GUI
+     * Creates new form Menu_GUI
      */
-    public Splash_GUI() {
+    public Menu_GUI() {
         initComponents();
     }
 
@@ -29,7 +29,8 @@ public class Splash_GUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        comerAqui_btn = new javax.swing.JButton();
+        paraLevar_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -39,27 +40,48 @@ public class Splash_GUI extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("<logo>");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(100, 140, 380, 320);
+        jLabel1.setBounds(230, 40, 110, 90);
 
-        jProgressBar1.setBackground(new java.awt.Color(0, 0, 0));
-        jProgressBar1.setForeground(new java.awt.Color(199, 135, 0));
-        jPanel1.add(jProgressBar1);
-        jProgressBar1.setBounds(80, 480, 410, 40);
+        comerAqui_btn.setText("Comer aqui");
+        comerAqui_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comerAqui_btnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(comerAqui_btn);
+        comerAqui_btn.setBounds(330, 220, 180, 170);
+
+        paraLevar_btn.setText("Levar");
+        paraLevar_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paraLevar_btnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(paraLevar_btn);
+        paraLevar_btn.setBounds(70, 220, 180, 170);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setSize(new java.awt.Dimension(578, 630));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void paraLevar_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paraLevar_btnActionPerformed
+        new Cardapio_GUI().setVisible(true);
+    }//GEN-LAST:event_paraLevar_btnActionPerformed
+
+    private void comerAqui_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comerAqui_btnActionPerformed
+        new Cardapio_GUI().setVisible(true);
+    }//GEN-LAST:event_comerAqui_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,27 +100,28 @@ public class Splash_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Splash_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Splash_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Splash_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Splash_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Splash_GUI().setVisible(true);
+                new Menu_GUI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton comerAqui_btn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JButton paraLevar_btn;
     // End of variables declaration//GEN-END:variables
 }

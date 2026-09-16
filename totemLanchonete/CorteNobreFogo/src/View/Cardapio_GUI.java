@@ -28,16 +28,133 @@ public class Cardapio_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        combos_btn = new javax.swing.JButton();
+        bebidas_btn = new javax.swing.JButton();
+        sobremesas_btn = new javax.swing.JButton();
+        acompanhamento_btn = new javax.swing.JButton();
+        logo = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        lista_txt = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
+        total_txt = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        escolhaHamburguer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Fundo.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 580, 630);
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(null);
+
+        combos_btn.setText("Combos");
+        jPanel2.add(combos_btn);
+        combos_btn.setBounds(20, 380, 110, 90);
+
+        bebidas_btn.setText("Bebidas");
+        jPanel2.add(bebidas_btn);
+        bebidas_btn.setBounds(20, 80, 110, 90);
+
+        sobremesas_btn.setText("Sobremesas");
+        jPanel2.add(sobremesas_btn);
+        sobremesas_btn.setBounds(20, 180, 110, 90);
+
+        acompanhamento_btn.setText("Acompanhamentos");
+        jPanel2.add(acompanhamento_btn);
+        acompanhamento_btn.setBounds(20, 280, 110, 90);
+
+        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo.setText("<logo>");
+        jPanel2.add(logo);
+        logo.setBounds(40, 10, 70, 60);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(-10, 0, 150, 490);
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel3.setLayout(null);
+
+        lista_txt.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        lista_txt.setText("Lista");
+        jPanel3.add(lista_txt);
+        lista_txt.setBounds(20, 10, 330, 60);
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.setLayout(null);
+
+        total_txt.setText("<variável-total>");
+        jPanel4.add(total_txt);
+        total_txt.setBounds(2, 2, 140, 60);
+
+        jPanel3.add(jPanel4);
+        jPanel4.setBounds(430, 10, 140, 60);
+
+        jLabel2.setText("Total:");
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(380, 30, 40, 16);
+
+        jButton1.setText("Cancelar Pedido");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1);
+        jButton1.setBounds(250, 80, 220, 50);
+
+        jButton2.setText("Finalizar Pedido");
+        jPanel3.add(jButton2);
+        jButton2.setBounds(20, 80, 220, 50);
+
+        jButton3.setText("<carrinho>");
+        jPanel3.add(jButton3);
+        jButton3.setBounds(480, 80, 90, 50);
+
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(0, 490, 580, 140);
+
+        jButton4.setText("X-Bacon");
+        jPanel1.add(jButton4);
+        jButton4.setBounds(360, 350, 140, 100);
+
+        jButton5.setText("X-Bacon");
+        jPanel1.add(jButton5);
+        jButton5.setBounds(190, 110, 140, 100);
+
+        jButton6.setText("X-Bacon");
+        jPanel1.add(jButton6);
+        jButton6.setBounds(360, 110, 140, 100);
+
+        jButton7.setText("X-Bacon");
+        jPanel1.add(jButton7);
+        jButton7.setBounds(360, 230, 140, 100);
+
+        jButton8.setText("X-Bacon");
+        jPanel1.add(jButton8);
+        jButton8.setBounds(190, 230, 140, 100);
+
+        jButton9.setText("X-Bacon");
+        jPanel1.add(jButton9);
+        jButton9.setBounds(190, 350, 140, 100);
+
+        escolhaHamburguer.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        escolhaHamburguer.setForeground(new java.awt.Color(255, 255, 255));
+        escolhaHamburguer.setText("Escolha Seu Hamburguer");
+        jPanel1.add(escolhaHamburguer);
+        escolhaHamburguer.setBounds(190, 30, 310, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -50,8 +167,15 @@ public class Cardapio_GUI extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(578, 630));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //Fazer confirmação com JOptionPane
+        //Agradecimento e voltar ao inicio
+        new Iniciar_GUI().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,7 +213,27 @@ public class Cardapio_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton acompanhamento_btn;
+    private javax.swing.JButton bebidas_btn;
+    private javax.swing.JButton combos_btn;
+    public static javax.swing.JLabel escolhaHamburguer;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    public static javax.swing.JTextField lista_txt;
+    private javax.swing.JLabel logo;
+    private javax.swing.JButton sobremesas_btn;
+    public static javax.swing.JLabel total_txt;
     // End of variables declaration//GEN-END:variables
 }
