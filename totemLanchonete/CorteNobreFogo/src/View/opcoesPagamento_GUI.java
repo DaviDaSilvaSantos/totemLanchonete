@@ -40,7 +40,7 @@ public class opcoesPagamento_GUI extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<logo>");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/log.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(230, 40, 110, 90);
 

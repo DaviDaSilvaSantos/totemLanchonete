@@ -57,33 +57,48 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(null);
 
-        combos_btn.setText("Combos");
+        combos_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/combo(1).jpg"))); // NOI18N
+        combos_btn.setBorderPainted(false);
+        combos_btn.setContentAreaFilled(false);
+        combos_btn.setFocusPainted(false);
         jPanel2.add(combos_btn);
-        combos_btn.setBounds(20, 380, 110, 90);
+        combos_btn.setBounds(10, 380, 150, 100);
 
-        bebidas_btn.setText("Bebidas");
+        bebidas_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/refrigerante(2).png"))); // NOI18N
+        bebidas_btn.setContentAreaFilled(false);
+        bebidas_btn.setFocusPainted(false);
+        bebidas_btn.setFocusable(false);
+        bebidas_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bebidas_btnActionPerformed(evt);
+            }
+        });
         jPanel2.add(bebidas_btn);
-        bebidas_btn.setBounds(20, 80, 110, 90);
+        bebidas_btn.setBounds(10, 90, 150, 80);
 
         sobremesas_btn.setText("Sobremesas");
         jPanel2.add(sobremesas_btn);
         sobremesas_btn.setBounds(20, 180, 110, 90);
 
-        acompanhamento_btn.setText("Acompanhamentos");
+        acompanhamento_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/batata.jpg"))); // NOI18N
+        acompanhamento_btn.setBorderPainted(false);
+        acompanhamento_btn.setContentAreaFilled(false);
         jPanel2.add(acompanhamento_btn);
-        acompanhamento_btn.setBounds(20, 280, 110, 90);
+        acompanhamento_btn.setBounds(10, 280, 150, 90);
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo.setText("<logo>");
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/log.png"))); // NOI18N
         jPanel2.add(logo);
-        logo.setBounds(40, 10, 70, 60);
+        logo.setBounds(40, 10, 80, 70);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(-10, 0, 150, 490);
+        jPanel2.setBounds(-10, 0, 160, 490);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(null);
 
@@ -102,9 +117,10 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         jPanel3.add(jPanel4);
         jPanel4.setBounds(430, 10, 140, 60);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Total:");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(380, 30, 40, 16);
+        jLabel2.setBounds(380, 30, 40, 14);
 
         jButton1.setText("Cancelar Pedido");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -176,6 +192,10 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         //Agradecimento e voltar ao inicio
         new Iniciar_GUI().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void bebidas_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bebidas_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bebidas_btnActionPerformed
 
     /**
      * @param args the command line arguments

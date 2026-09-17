@@ -38,31 +38,25 @@ public class Iniciar_GUI extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(null);
 
+        fazerPedido_btn.setBackground(new java.awt.Color(255, 255, 255));
+        fazerPedido_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        fazerPedido_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/fork.png"))); // NOI18N
         fazerPedido_btn.setText("Fazer Pedido");
+        fazerPedido_btn.setDefaultCapable(false);
+        fazerPedido_btn.setFocusPainted(false);
+        fazerPedido_btn.setFocusable(false);
+        fazerPedido_btn.setOpaque(false);
         fazerPedido_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fazerPedido_btnActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(fazerPedido_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
-                .addComponent(fazerPedido_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
+        jPanel2.add(fazerPedido_btn);
+        fazerPedido_btn.setBounds(170, 30, 200, 80);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 490, 580, 140);

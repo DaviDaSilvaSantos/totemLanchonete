@@ -36,39 +36,32 @@ public class Pagamento_GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<logo>");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/log.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(230, 40, 110, 90);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(null);
 
+        finalizarPagamento_btn.setBackground(new java.awt.Color(255, 255, 255));
+        finalizarPagamento_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        finalizarPagamento_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/wallet.png"))); // NOI18N
         finalizarPagamento_btn.setText("Finalizar Pagamento");
+        finalizarPagamento_btn.setDefaultCapable(false);
+        finalizarPagamento_btn.setFocusPainted(false);
+        finalizarPagamento_btn.setFocusable(false);
+        finalizarPagamento_btn.setOpaque(false);
         finalizarPagamento_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 finalizarPagamento_btnActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(finalizarPagamento_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
-                .addComponent(finalizarPagamento_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
+        jPanel2.add(finalizarPagamento_btn);
+        finalizarPagamento_btn.setBounds(180, 30, 240, 80);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 490, 580, 140);

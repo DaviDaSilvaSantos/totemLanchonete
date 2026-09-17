@@ -34,12 +34,14 @@ public class Splash_GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<logo>");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/lo.png"))); // NOI18N
+        jLabel1.setToolTipText("");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(100, 140, 380, 320);
+        jLabel1.setBounds(40, 20, 510, 450);
 
         jProgressBar1.setBackground(new java.awt.Color(0, 0, 0));
         jProgressBar1.setForeground(new java.awt.Color(199, 135, 0));
