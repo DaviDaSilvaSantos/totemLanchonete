@@ -22,7 +22,7 @@ public class Splash_DAO {
                         progresso.setValue(i);
 
                         if (progresso.getValue() == 10) {
-                            // driver_conexao.carregardriver();
+                            Controller.Testa_DB.carregaDriver();
                             sleep(2000);
 
                         } else if (progresso.getValue() <= 30) {

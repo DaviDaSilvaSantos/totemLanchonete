@@ -29,23 +29,23 @@ public class Splash_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         progresso = new javax.swing.JProgressBar();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<logo>");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(100, 140, 380, 320);
 
         progresso.setBackground(new java.awt.Color(0, 0, 0));
         progresso.setForeground(new java.awt.Color(199, 135, 0));
         jPanel1.add(progresso);
         progresso.setBounds(80, 480, 410, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Splash.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 580, 630);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,7 +98,7 @@ public class Splash_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JProgressBar progresso;
     // End of variables declaration//GEN-END:variables

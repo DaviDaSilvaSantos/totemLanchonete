@@ -28,20 +28,17 @@ public class Menu_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         comerAqui_btn = new javax.swing.JButton();
         paraLevar_btn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setLayout(null);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<logo>");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(230, 40, 110, 90);
-
+        comerAqui_btn.setBackground(new java.awt.Color(199, 135, 0));
+        comerAqui_btn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         comerAqui_btn.setText("Comer aqui");
         comerAqui_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,8 +46,10 @@ public class Menu_GUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(comerAqui_btn);
-        comerAqui_btn.setBounds(330, 220, 180, 170);
+        comerAqui_btn.setBounds(330, 270, 180, 170);
 
+        paraLevar_btn.setBackground(new java.awt.Color(199, 135, 0));
+        paraLevar_btn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         paraLevar_btn.setText("Levar");
         paraLevar_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +57,11 @@ public class Menu_GUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(paraLevar_btn);
-        paraLevar_btn.setBounds(70, 220, 180, 170);
+        paraLevar_btn.setBounds(70, 270, 180, 170);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/FundoComLogo.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 580, 630);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,7 +125,7 @@ public class Menu_GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton comerAqui_btn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton paraLevar_btn;
     // End of variables declaration//GEN-END:variables

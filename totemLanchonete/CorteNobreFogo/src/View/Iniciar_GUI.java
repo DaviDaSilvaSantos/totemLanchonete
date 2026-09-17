@@ -38,9 +38,14 @@ public class Iniciar_GUI extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        fazerPedido_btn.setBackground(new java.awt.Color(199, 135, 0));
+        fazerPedido_btn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         fazerPedido_btn.setText("Fazer Pedido");
+        fazerPedido_btn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        fazerPedido_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fazerPedido_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fazerPedido_btnActionPerformed(evt);
@@ -67,7 +72,7 @@ public class Iniciar_GUI extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 490, 580, 140);
 
-        jLabel2.setText("<layout-inicial> | Fazer no Canva");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/layoutInicial.png"))); // NOI18N
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 580, 490);
 
