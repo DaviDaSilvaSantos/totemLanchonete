@@ -37,48 +37,76 @@ public class opcoesPagamento_GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/log.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/250.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(230, 40, 110, 90);
+        jLabel1.setBounds(160, 0, 280, 220);
 
-        dinheiro_btn.setText("<dinheiro>");
+        dinheiro_btn.setBackground(new java.awt.Color(255, 255, 255));
+        dinheiro_btn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        dinheiro_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/money.png"))); // NOI18N
+        dinheiro_btn.setText("Dinheiro");
+        dinheiro_btn.setDefaultCapable(false);
+        dinheiro_btn.setFocusPainted(false);
+        dinheiro_btn.setFocusable(false);
+        dinheiro_btn.setOpaque(false);
         dinheiro_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dinheiro_btnActionPerformed(evt);
             }
         });
         jPanel1.add(dinheiro_btn);
-        dinheiro_btn.setBounds(90, 450, 400, 80);
+        dinheiro_btn.setBounds(90, 510, 400, 80);
 
-        pagamentoPix_btn.setText("<logo-pix>");
+        pagamentoPix_btn.setBackground(new java.awt.Color(255, 255, 255));
+        pagamentoPix_btn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        pagamentoPix_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/pix-svgrepo-com(1).png"))); // NOI18N
+        pagamentoPix_btn.setText("Pix");
+        pagamentoPix_btn.setDefaultCapable(false);
+        pagamentoPix_btn.setFocusPainted(false);
+        pagamentoPix_btn.setFocusable(false);
         pagamentoPix_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pagamentoPix_btnActionPerformed(evt);
             }
         });
         jPanel1.add(pagamentoPix_btn);
-        pagamentoPix_btn.setBounds(90, 160, 400, 70);
+        pagamentoPix_btn.setBounds(90, 220, 400, 70);
 
-        cartaoDebito_btn.setText("<cartao-debito>");
+        cartaoDebito_btn.setBackground(new java.awt.Color(255, 255, 255));
+        cartaoDebito_btn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cartaoDebito_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/card.png"))); // NOI18N
+        cartaoDebito_btn.setText("Cartão de Débito");
+        cartaoDebito_btn.setDefaultCapable(false);
+        cartaoDebito_btn.setFocusPainted(false);
+        cartaoDebito_btn.setFocusable(false);
+        cartaoDebito_btn.setOpaque(false);
         cartaoDebito_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cartaoDebito_btnActionPerformed(evt);
             }
         });
         jPanel1.add(cartaoDebito_btn);
-        cartaoDebito_btn.setBounds(90, 250, 400, 80);
+        cartaoDebito_btn.setBounds(90, 310, 400, 80);
 
-        cartaoCredito_btn.setText("<cartao-credito>");
+        cartaoCredito_btn.setBackground(new java.awt.Color(255, 255, 255));
+        cartaoCredito_btn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cartaoCredito_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/credit-card.png"))); // NOI18N
+        cartaoCredito_btn.setText("Cartão de Crédito");
+        cartaoCredito_btn.setDefaultCapable(false);
+        cartaoCredito_btn.setFocusPainted(false);
+        cartaoCredito_btn.setFocusable(false);
+        cartaoCredito_btn.setOpaque(false);
         cartaoCredito_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cartaoCredito_btnActionPerformed(evt);
             }
         });
         jPanel1.add(cartaoCredito_btn);
-        cartaoCredito_btn.setBounds(90, 350, 400, 80);
+        cartaoCredito_btn.setBounds(90, 410, 400, 80);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,11 +175,11 @@ public class opcoesPagamento_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cartaoCredito_btn;
-    private javax.swing.JButton cartaoDebito_btn;
-    private javax.swing.JButton dinheiro_btn;
+    public static javax.swing.JButton cartaoCredito_btn;
+    public static javax.swing.JButton cartaoDebito_btn;
+    public static javax.swing.JButton dinheiro_btn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton pagamentoPix_btn;
+    public static javax.swing.JButton pagamentoPix_btn;
     // End of variables declaration//GEN-END:variables
 }

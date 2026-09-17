@@ -78,11 +78,16 @@ public class Cardapio_GUI extends javax.swing.JFrame {
             }
         });
         jPanel2.add(bebidas_btn);
-        bebidas_btn.setBounds(10, 90, 150, 80);
+        bebidas_btn.setBounds(10, 110, 150, 80);
 
         sobremesas_btn.setText("Sobremesas");
+        sobremesas_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sobremesas_btnActionPerformed(evt);
+            }
+        });
         jPanel2.add(sobremesas_btn);
-        sobremesas_btn.setBounds(20, 180, 110, 90);
+        sobremesas_btn.setBounds(30, 200, 110, 90);
 
         acompanhamento_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/batata.jpg"))); // NOI18N
         acompanhamento_btn.setBorderPainted(false);
@@ -91,9 +96,9 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         acompanhamento_btn.setBounds(10, 280, 150, 90);
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/log.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/150.png"))); // NOI18N
         jPanel2.add(logo);
-        logo.setBounds(40, 10, 80, 70);
+        logo.setBounds(10, 0, 150, 110);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(-10, 0, 160, 490);
@@ -196,6 +201,10 @@ public class Cardapio_GUI extends javax.swing.JFrame {
     private void bebidas_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bebidas_btnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bebidas_btnActionPerformed
+
+    private void sobremesas_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sobremesas_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sobremesas_btnActionPerformed
 
     /**
      * @param args the command line arguments
