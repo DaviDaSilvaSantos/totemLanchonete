@@ -93,7 +93,8 @@ public class Pagamento_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void finalizarPagamento_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarPagamento_btnActionPerformed
-        //
+        new opcoesPagamento_GUI().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_finalizarPagamento_btnActionPerformed
 
     /**

@@ -29,26 +29,26 @@ public class Cardapio_GUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        combos_btn = new javax.swing.JButton();
-        bebidas_btn = new javax.swing.JButton();
-        sobremesas_btn = new javax.swing.JButton();
-        acompanhamento_btn = new javax.swing.JButton();
+        opcao4_btn = new javax.swing.JButton();
+        opcao1_btn = new javax.swing.JButton();
+        opcao2_btn = new javax.swing.JButton();
+        opcao3_btn = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         lista_txt = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         total_txt = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        escolhaHamburguer = new javax.swing.JLabel();
+        cancelarPedido_btn = new javax.swing.JButton();
+        finalizarPedido_btn = new javax.swing.JButton();
+        carrinho_btn = new javax.swing.JButton();
+        botao6_btn = new javax.swing.JButton();
+        botao1_btn = new javax.swing.JButton();
+        botao2_btn = new javax.swing.JButton();
+        botao4_btn = new javax.swing.JButton();
+        botao3_btn = new javax.swing.JButton();
+        botao5_btn = new javax.swing.JButton();
+        escolha_txt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -60,21 +60,21 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(null);
 
-        combos_btn.setText("Combos");
-        jPanel2.add(combos_btn);
-        combos_btn.setBounds(20, 380, 110, 90);
+        opcao4_btn.setText("Combos");
+        jPanel2.add(opcao4_btn);
+        opcao4_btn.setBounds(20, 380, 110, 90);
 
-        bebidas_btn.setText("Bebidas");
-        jPanel2.add(bebidas_btn);
-        bebidas_btn.setBounds(20, 80, 110, 90);
+        opcao1_btn.setText("Bebidas");
+        jPanel2.add(opcao1_btn);
+        opcao1_btn.setBounds(20, 80, 110, 90);
 
-        sobremesas_btn.setText("Sobremesas");
-        jPanel2.add(sobremesas_btn);
-        sobremesas_btn.setBounds(20, 180, 110, 90);
+        opcao2_btn.setText("Sobremesas");
+        jPanel2.add(opcao2_btn);
+        opcao2_btn.setBounds(20, 180, 110, 90);
 
-        acompanhamento_btn.setText("Acompanhamentos");
-        jPanel2.add(acompanhamento_btn);
-        acompanhamento_btn.setBounds(20, 280, 110, 90);
+        opcao3_btn.setText("Acompanhamentos");
+        jPanel2.add(opcao3_btn);
+        opcao3_btn.setBounds(20, 280, 110, 90);
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo.setText("<logo>");
@@ -104,57 +104,62 @@ public class Cardapio_GUI extends javax.swing.JFrame {
 
         jLabel2.setText("Total:");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(380, 30, 40, 16);
+        jLabel2.setBounds(380, 30, 40, 14);
 
-        jButton1.setText("Cancelar Pedido");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cancelarPedido_btn.setText("Cancelar Pedido");
+        cancelarPedido_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cancelarPedido_btnActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1);
-        jButton1.setBounds(250, 80, 220, 50);
+        jPanel3.add(cancelarPedido_btn);
+        cancelarPedido_btn.setBounds(250, 80, 220, 50);
 
-        jButton2.setText("Finalizar Pedido");
-        jPanel3.add(jButton2);
-        jButton2.setBounds(20, 80, 220, 50);
+        finalizarPedido_btn.setText("Finalizar Pedido");
+        finalizarPedido_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finalizarPedido_btnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(finalizarPedido_btn);
+        finalizarPedido_btn.setBounds(20, 80, 220, 50);
 
-        jButton3.setText("<carrinho>");
-        jPanel3.add(jButton3);
-        jButton3.setBounds(480, 80, 90, 50);
+        carrinho_btn.setText("<carrinho>");
+        jPanel3.add(carrinho_btn);
+        carrinho_btn.setBounds(480, 80, 90, 50);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 490, 580, 140);
 
-        jButton4.setText("X-Bacon");
-        jPanel1.add(jButton4);
-        jButton4.setBounds(360, 350, 140, 100);
+        botao6_btn.setText("X-Bacon");
+        jPanel1.add(botao6_btn);
+        botao6_btn.setBounds(360, 350, 140, 100);
 
-        jButton5.setText("X-Bacon");
-        jPanel1.add(jButton5);
-        jButton5.setBounds(190, 110, 140, 100);
+        botao1_btn.setText("X-Bacon");
+        jPanel1.add(botao1_btn);
+        botao1_btn.setBounds(190, 110, 140, 100);
 
-        jButton6.setText("X-Bacon");
-        jPanel1.add(jButton6);
-        jButton6.setBounds(360, 110, 140, 100);
+        botao2_btn.setText("X-Bacon");
+        jPanel1.add(botao2_btn);
+        botao2_btn.setBounds(360, 110, 140, 100);
 
-        jButton7.setText("X-Bacon");
-        jPanel1.add(jButton7);
-        jButton7.setBounds(360, 230, 140, 100);
+        botao4_btn.setText("X-Bacon");
+        jPanel1.add(botao4_btn);
+        botao4_btn.setBounds(360, 230, 140, 100);
 
-        jButton8.setText("X-Bacon");
-        jPanel1.add(jButton8);
-        jButton8.setBounds(190, 230, 140, 100);
+        botao3_btn.setText("X-Bacon");
+        jPanel1.add(botao3_btn);
+        botao3_btn.setBounds(190, 230, 140, 100);
 
-        jButton9.setText("X-Bacon");
-        jPanel1.add(jButton9);
-        jButton9.setBounds(190, 350, 140, 100);
+        botao5_btn.setText("X-Bacon");
+        jPanel1.add(botao5_btn);
+        botao5_btn.setBounds(190, 350, 140, 100);
 
-        escolhaHamburguer.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        escolhaHamburguer.setForeground(new java.awt.Color(255, 255, 255));
-        escolhaHamburguer.setText("Escolha Seu Hamburguer");
-        jPanel1.add(escolhaHamburguer);
-        escolhaHamburguer.setBounds(190, 30, 310, 60);
+        escolha_txt.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        escolha_txt.setForeground(new java.awt.Color(255, 255, 255));
+        escolha_txt.setText("Escolha Seu Hamburguer");
+        jPanel1.add(escolha_txt);
+        escolha_txt.setBounds(190, 30, 310, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,11 +176,17 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cancelarPedido_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarPedido_btnActionPerformed
         //Fazer confirmação com JOptionPane
         //Agradecimento e voltar ao inicio
-        new Iniciar_GUI().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        Model.Funcoes_DAO.confirmacaoSaida();
+        this.dispose();
+    }//GEN-LAST:event_cancelarPedido_btnActionPerformed
+
+    private void finalizarPedido_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarPedido_btnActionPerformed
+        new Pagamento_GUI().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_finalizarPedido_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,19 +224,16 @@ public class Cardapio_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton acompanhamento_btn;
-    private javax.swing.JButton bebidas_btn;
-    private javax.swing.JButton combos_btn;
-    public static javax.swing.JLabel escolhaHamburguer;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton botao1_btn;
+    private javax.swing.JButton botao2_btn;
+    private javax.swing.JButton botao3_btn;
+    private javax.swing.JButton botao4_btn;
+    private javax.swing.JButton botao5_btn;
+    private javax.swing.JButton botao6_btn;
+    private javax.swing.JButton cancelarPedido_btn;
+    private javax.swing.JButton carrinho_btn;
+    public static javax.swing.JLabel escolha_txt;
+    private javax.swing.JButton finalizarPedido_btn;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -233,7 +241,10 @@ public class Cardapio_GUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     public static javax.swing.JTextField lista_txt;
     private javax.swing.JLabel logo;
-    private javax.swing.JButton sobremesas_btn;
+    private javax.swing.JButton opcao1_btn;
+    private javax.swing.JButton opcao2_btn;
+    private javax.swing.JButton opcao3_btn;
+    private javax.swing.JButton opcao4_btn;
     public static javax.swing.JLabel total_txt;
     // End of variables declaration//GEN-END:variables
 }

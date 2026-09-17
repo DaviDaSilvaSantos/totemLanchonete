@@ -7,14 +7,14 @@ package View;
 
 /**
  *
- * @author alunos
+ * @author davis
  */
-public class Iniciar_GUI extends javax.swing.JFrame {
+public class Cadastro_GUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form Iniciar_GUI
+     * Creates new form Cadastro_GUI
      */
-    public Iniciar_GUI() {
+    public Cadastro_GUI() {
         initComponents();
     }
 
@@ -28,48 +28,54 @@ public class Iniciar_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        fazerPedido_btn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        nomeCliente_txt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        cpfCliente_txt = new javax.swing.JTextField();
+        entrar_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(null);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("<logo>");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(230, 40, 110, 90);
 
-        fazerPedido_btn.setText("Fazer Pedido");
-        fazerPedido_btn.addActionListener(new java.awt.event.ActionListener() {
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Digite seu CPF (se quiser):");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(0, 100, 366, 42);
+        jPanel2.add(nomeCliente_txt);
+        nomeCliente_txt.setBounds(10, 50, 350, 50);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Digite seu nome:");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(0, 10, 366, 42);
+        jPanel2.add(cpfCliente_txt);
+        cpfCliente_txt.setBounds(10, 150, 350, 50);
+
+        entrar_btn.setText("Entrar");
+        entrar_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fazerPedido_btnActionPerformed(evt);
+                entrar_btnActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(fazerPedido_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
-                .addComponent(fazerPedido_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
+        jPanel2.add(entrar_btn);
+        entrar_btn.setBounds(120, 220, 130, 60);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 490, 580, 140);
-
-        jLabel2.setText("<layout-inicial> | Fazer no Canva");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 580, 490);
+        jPanel2.setBounds(90, 190, 370, 310);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,10 +92,12 @@ public class Iniciar_GUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fazerPedido_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fazerPedido_btnActionPerformed
-        new Cadastro_GUI().setVisible(true);
+    private void entrar_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrar_btnActionPerformed
+        //Se receber for o primeiro acesso, a primeira compra ganha 50% de desconto. Se não for, cobra-se o preço normal
+        Model.Funcoes_DAO.cadastrarCliente();
+        new Menu_GUI().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_fazerPedido_btnActionPerformed
+    }//GEN-LAST:event_entrar_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,28 +116,32 @@ public class Iniciar_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Iniciar_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastro_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Iniciar_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastro_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Iniciar_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastro_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Iniciar_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cadastro_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Iniciar_GUI().setVisible(true);
+                new Cadastro_GUI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton fazerPedido_btn;
+    public static javax.swing.JTextField cpfCliente_txt;
+    private javax.swing.JButton entrar_btn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    public static javax.swing.JTextField nomeCliente_txt;
     // End of variables declaration//GEN-END:variables
 }

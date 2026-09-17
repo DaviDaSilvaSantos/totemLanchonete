@@ -77,10 +77,12 @@ public class Menu_GUI extends javax.swing.JFrame {
 
     private void paraLevar_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paraLevar_btnActionPerformed
         new Cardapio_GUI().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_paraLevar_btnActionPerformed
 
     private void comerAqui_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comerAqui_btnActionPerformed
         new Cardapio_GUI().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_comerAqui_btnActionPerformed
 
     /**
