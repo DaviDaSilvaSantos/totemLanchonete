@@ -27,6 +27,7 @@ public class Cardapio_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         opcao4_btn = new javax.swing.JButton();
@@ -34,6 +35,7 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         opcao2_btn = new javax.swing.JButton();
         opcao3_btn = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         lista_txt = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
@@ -42,6 +44,7 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         cancelarPedido_btn = new javax.swing.JButton();
         finalizarPedido_btn = new javax.swing.JButton();
         carrinho_btn = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         botao6_btn = new javax.swing.JButton();
         botao1_btn = new javax.swing.JButton();
         botao2_btn = new javax.swing.JButton();
@@ -49,41 +52,77 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         botao3_btn = new javax.swing.JButton();
         botao5_btn = new javax.swing.JButton();
         escolha_txt = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(null);
 
-        opcao4_btn.setText("Combos");
+        opcao4_btn.setBackground(new java.awt.Color(255, 255, 255));
+        opcao4_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/business.png"))); // NOI18N
+        opcao4_btn.setFocusPainted(false);
+        opcao4_btn.setFocusable(false);
+        opcao4_btn.setOpaque(false);
         jPanel2.add(opcao4_btn);
-        opcao4_btn.setBounds(20, 380, 110, 90);
+        opcao4_btn.setBounds(30, 390, 110, 80);
 
-        opcao1_btn.setText("Bebidas");
+        opcao1_btn.setBackground(new java.awt.Color(255, 255, 255));
+        opcao1_btn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        opcao1_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/soft-drink.png"))); // NOI18N
+        opcao1_btn.setFocusPainted(false);
+        opcao1_btn.setFocusable(false);
+        opcao1_btn.setOpaque(false);
+        opcao1_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bebidas_btnActionPerformed(evt);
+            }
+        });
         jPanel2.add(opcao1_btn);
-        opcao1_btn.setBounds(20, 80, 110, 90);
+        opcao1_btn.setBounds(30, 120, 110, 80);
 
-        opcao2_btn.setText("Sobremesas");
+        opcao2_btn.setBackground(new java.awt.Color(255, 255, 255));
+        opcao2_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/ice-cream.png"))); // NOI18N
+        opcao2_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sobremesas_btnActionPerformed(evt);
+            }
+        });
         jPanel2.add(opcao2_btn);
-        opcao2_btn.setBounds(20, 180, 110, 90);
+        opcao2_btn.setBounds(30, 210, 110, 80);
 
-        opcao3_btn.setText("Acompanhamentos");
+        opcao3_btn.setBackground(new java.awt.Color(255, 255, 255));
+        opcao3_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/fried-potatoes.png"))); // NOI18N
+        opcao3_btn.setDefaultCapable(false);
+        opcao3_btn.setFocusable(false);
+        opcao3_btn.setOpaque(false);
         jPanel2.add(opcao3_btn);
-        opcao3_btn.setBounds(20, 280, 110, 90);
+        opcao3_btn.setBounds(30, 300, 110, 80);
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo.setText("<logo>");
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/150.png"))); // NOI18N
         jPanel2.add(logo);
-        logo.setBounds(40, 10, 70, 60);
+        logo.setBounds(10, 0, 150, 110);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Fundo.jpg"))); // NOI18N
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(4, 0, 160, 490);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(-10, 0, 150, 490);
+        jPanel2.setBounds(-10, 0, 160, 490);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(null);
 
@@ -102,11 +141,20 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         jPanel3.add(jPanel4);
         jPanel4.setBounds(430, 10, 140, 60);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Total:");
         jPanel3.add(jLabel2);
         jLabel2.setBounds(380, 30, 40, 14);
 
+        cancelarPedido_btn.setBackground(new java.awt.Color(255, 255, 255));
+        cancelarPedido_btn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cancelarPedido_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/delete(1).png"))); // NOI18N
         cancelarPedido_btn.setText("Cancelar Pedido");
+        cancelarPedido_btn.setDefaultCapable(false);
+        cancelarPedido_btn.setFocusPainted(false);
+        cancelarPedido_btn.setFocusable(false);
+        cancelarPedido_btn.setOpaque(false);
         cancelarPedido_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarPedido_btnActionPerformed(evt);
@@ -115,7 +163,14 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         jPanel3.add(cancelarPedido_btn);
         cancelarPedido_btn.setBounds(250, 80, 220, 50);
 
+        finalizarPedido_btn.setBackground(new java.awt.Color(255, 255, 255));
+        finalizarPedido_btn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        finalizarPedido_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/ecommerce(1).png"))); // NOI18N
         finalizarPedido_btn.setText("Finalizar Pedido");
+        finalizarPedido_btn.setDefaultCapable(false);
+        finalizarPedido_btn.setFocusPainted(false);
+        finalizarPedido_btn.setFocusable(false);
+        finalizarPedido_btn.setOpaque(false);
         finalizarPedido_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 finalizarPedido_btnActionPerformed(evt);
@@ -124,42 +179,115 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         jPanel3.add(finalizarPedido_btn);
         finalizarPedido_btn.setBounds(20, 80, 220, 50);
 
-        carrinho_btn.setText("<carrinho>");
+        carrinho_btn.setBackground(new java.awt.Color(255, 255, 255));
+        carrinho_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/trolley.png"))); // NOI18N
+        carrinho_btn.setDefaultCapable(false);
+        carrinho_btn.setFocusPainted(false);
+        carrinho_btn.setFocusable(false);
+        carrinho_btn.setOpaque(false);
         jPanel3.add(carrinho_btn);
         carrinho_btn.setBounds(480, 80, 90, 50);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Fundo.jpg"))); // NOI18N
+        jPanel3.add(jLabel8);
+        jLabel8.setBounds(-6, 0, 590, 140);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 490, 580, 140);
 
-        botao6_btn.setText("X-Bacon");
+        botao6_btn.setBackground(new java.awt.Color(255, 255, 255));
+        botao6_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/cheddar(1)(1).png"))); // NOI18N
+        botao6_btn.setDefaultCapable(false);
+        botao6_btn.setFocusPainted(false);
+        botao6_btn.setFocusable(false);
+        botao6_btn.setOpaque(false);
         jPanel1.add(botao6_btn);
-        botao6_btn.setBounds(360, 350, 140, 100);
+        botao6_btn.setBounds(360, 360, 140, 100);
 
-        botao1_btn.setText("X-Bacon");
+        botao1_btn.setBackground(new java.awt.Color(255, 255, 255));
+        botao1_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/x carne(1)(1).png"))); // NOI18N
+        botao1_btn.setDefaultCapable(false);
+        botao1_btn.setFocusPainted(false);
+        botao1_btn.setFocusable(false);
+        botao1_btn.setOpaque(false);
         jPanel1.add(botao1_btn);
-        botao1_btn.setBounds(190, 110, 140, 100);
+        botao1_btn.setBounds(190, 100, 140, 100);
 
-        botao2_btn.setText("X-Bacon");
+        botao2_btn.setBackground(new java.awt.Color(255, 255, 255));
+        botao2_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/x queijo (2).png"))); // NOI18N
+        botao2_btn.setDefaultCapable(false);
+        botao2_btn.setFocusPainted(false);
+        botao2_btn.setFocusable(false);
+        botao2_btn.setOpaque(false);
         jPanel1.add(botao2_btn);
-        botao2_btn.setBounds(360, 110, 140, 100);
+        botao2_btn.setBounds(360, 100, 140, 100);
 
-        botao4_btn.setText("X-Bacon");
+        botao4_btn.setBackground(new java.awt.Color(255, 255, 255));
+        botao4_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/frango(1)(1).png"))); // NOI18N
+        botao4_btn.setDefaultCapable(false);
+        botao4_btn.setFocusPainted(false);
+        botao4_btn.setFocusable(false);
+        botao4_btn.setOpaque(false);
         jPanel1.add(botao4_btn);
         botao4_btn.setBounds(360, 230, 140, 100);
 
-        botao3_btn.setText("X-Bacon");
+        botao3_btn.setBackground(new java.awt.Color(255, 255, 255));
+        botao3_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/bacon(1)(1).png"))); // NOI18N
+        botao3_btn.setDefaultCapable(false);
+        botao3_btn.setFocusPainted(false);
+        botao3_btn.setFocusable(false);
+        botao3_btn.setOpaque(false);
         jPanel1.add(botao3_btn);
         botao3_btn.setBounds(190, 230, 140, 100);
 
-        botao5_btn.setText("X-Bacon");
+        botao5_btn.setBackground(new java.awt.Color(255, 255, 255));
+        botao5_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/tudo(1)(1).png"))); // NOI18N
+        botao5_btn.setDefaultCapable(false);
+        botao5_btn.setFocusPainted(false);
+        botao5_btn.setFocusable(false);
+        botao5_btn.setOpaque(false);
+        botao5_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         jPanel1.add(botao5_btn);
-        botao5_btn.setBounds(190, 350, 140, 100);
+        botao5_btn.setBounds(190, 360, 140, 100);
 
         escolha_txt.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        escolha_txt.setForeground(new java.awt.Color(255, 255, 255));
         escolha_txt.setText("Escolha Seu Hamburguer");
         jPanel1.add(escolha_txt);
-        escolha_txt.setBounds(190, 30, 310, 60);
+        escolha_txt.setBounds(270, 0, 170, 60);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("X Cheddar");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(400, 340, 57, 20);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("X Carne");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(240, 80, 90, 20);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("X Queijo");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(400, 80, 90, 20);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setText("X Bacon");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(240, 210, 50, 20);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("X Frango");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(400, 210, 50, 20);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setText("X Tudo");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(240, 340, 50, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,6 +315,18 @@ public class Cardapio_GUI extends javax.swing.JFrame {
         new Pagamento_GUI().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_finalizarPedido_btnActionPerformed
+
+    private void bebidas_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bebidas_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bebidas_btnActionPerformed
+
+    private void sobremesas_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sobremesas_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sobremesas_btnActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,27 +364,36 @@ public class Cardapio_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botao1_btn;
-    private javax.swing.JButton botao2_btn;
-    private javax.swing.JButton botao3_btn;
-    private javax.swing.JButton botao4_btn;
-    private javax.swing.JButton botao5_btn;
-    private javax.swing.JButton botao6_btn;
-    private javax.swing.JButton cancelarPedido_btn;
-    private javax.swing.JButton carrinho_btn;
+    public static javax.swing.JButton botao1_btn;
+    public static javax.swing.JButton botao2_btn;
+    public static javax.swing.JButton botao3_btn;
+    public static javax.swing.JButton botao4_btn;
+    public static javax.swing.JButton botao5_btn;
+    public static javax.swing.JButton botao6_btn;
+    public static javax.swing.JButton cancelarPedido_btn;
+    public static javax.swing.JButton carrinho_btn;
     public static javax.swing.JLabel escolha_txt;
-    private javax.swing.JButton finalizarPedido_btn;
+    public static javax.swing.JButton finalizarPedido_btn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollBar jScrollBar1;
     public static javax.swing.JTextField lista_txt;
     private javax.swing.JLabel logo;
-    private javax.swing.JButton opcao1_btn;
-    private javax.swing.JButton opcao2_btn;
-    private javax.swing.JButton opcao3_btn;
-    private javax.swing.JButton opcao4_btn;
+    public static javax.swing.JButton opcao1_btn;
+    public static javax.swing.JButton opcao2_btn;
+    public static javax.swing.JButton opcao3_btn;
+    public static javax.swing.JButton opcao4_btn;
     public static javax.swing.JLabel total_txt;
     // End of variables declaration//GEN-END:variables
 }

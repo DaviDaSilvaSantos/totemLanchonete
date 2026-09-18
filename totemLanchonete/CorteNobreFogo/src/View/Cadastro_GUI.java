@@ -35,29 +35,35 @@ public class Cadastro_GUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         cpfCliente_txt = new javax.swing.JTextField();
         entrar_btn = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<logo>");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/150.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(230, 40, 110, 90);
+        jLabel1.setBounds(180, 30, 200, 130);
 
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Digite seu CPF (se quiser):");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(0, 100, 366, 42);
+        jLabel2.setBounds(0, 110, 366, 42);
         jPanel2.add(nomeCliente_txt);
         nomeCliente_txt.setBounds(10, 50, 350, 50);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Digite seu nome:");
         jPanel2.add(jLabel3);
@@ -65,7 +71,13 @@ public class Cadastro_GUI extends javax.swing.JFrame {
         jPanel2.add(cpfCliente_txt);
         cpfCliente_txt.setBounds(10, 150, 350, 50);
 
+        entrar_btn.setBackground(new java.awt.Color(255, 255, 255));
+        entrar_btn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         entrar_btn.setText("Entrar");
+        entrar_btn.setDefaultCapable(false);
+        entrar_btn.setFocusPainted(false);
+        entrar_btn.setFocusable(false);
+        entrar_btn.setOpaque(false);
         entrar_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 entrar_btnActionPerformed(evt);
@@ -74,8 +86,16 @@ public class Cadastro_GUI extends javax.swing.JFrame {
         jPanel2.add(entrar_btn);
         entrar_btn.setBounds(120, 220, 130, 60);
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Fundo.jpg"))); // NOI18N
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(4, 4, 360, 300);
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(90, 190, 370, 310);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Fundo.jpg"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(-6, 0, 580, 620);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,6 +160,8 @@ public class Cadastro_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public static javax.swing.JTextField nomeCliente_txt;
